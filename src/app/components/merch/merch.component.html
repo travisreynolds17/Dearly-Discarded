@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="heading">Official Shop</div>
+
+  <div class="categories">
+    <div (click)="toggleShirts()" class="section">
+      <img src="../../../assets/img/merch/shirts1-thumb.jpg" alt="" />
+      <h2>Shirts</h2>
+    </div>
+    <div (click)="toggleHats()" class="section">
+      <img src="../../../assets/img/merch/hat1-thumb.jpg" alt="" />
+      <h2>Hats</h2>
+    </div>
+    <div (click)="toggleAccessories()" class="section">
+      <img src="../../../assets/img/merch/accessories1-thumb.jpg" alt="" />
+      <h2>Accessories</h2>
+    </div>
+  </div>
+
+  <div class="cards">
+    <div class="merch-card" *ngIf="shirtsExist" [class.show]="showShirts">
+        <hr />
+      <div class="shirts" *ngFor="let shirt of shirts">
+        <img src="{{ shirt.img }}" alt="" />
+        <h2>{{ shirt.style }}</h2>
+        <div>{{ shirt.price }}</div>
+        <div>{{ shirt.sizes }}</div>
+        <button>Get it!</button>
+        <hr />
+      </div>
+    </div>
+    <div class="merch-card" *ngIf="hatsExist" [class.show]="showHats">
+        <hr />
+      <div class="hats" *ngFor="let hat of hats">
+        <img src="{{ hat.img }}" alt="" />
+        <h2>{{ hat.style }}</h2>
+        <div>{{ hat.price }}</div>
+        <div>{{ hat.sizes }}</div>
+        <button>Get it!</button>
+        <hr />
+      </div>
+    </div>
+    <div
+      class="merch-card"
+      *ngIf="accessoriesExist"
+      [class.show]="showAccessories"
+    >
+      <div class="accessories" *ngFor="let accessory of accessories">
+          <hr />
+        <img src="{{ accessory.img }}" alt="" />
+        <h2>{{ accessory.style }}</h2>
+        <div>{{ accessory.price }}</div>
+        <div>{{ accessory.sizes }}</div>
+        <button>Get It!</button>
+        
+      </div>
+    </div>
+  </div>
+</div>

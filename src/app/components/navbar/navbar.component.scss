@@ -1,0 +1,104 @@
+@import "../../../styles";
+
+a {
+  color: $white;
+}
+
+.logo {
+  font-family: $font-fancy;
+  font-size: 2rem;
+  font-weight: 300;
+  color: $white;
+}
+
+//phones - here we are keeping the breakpoints limited as this is intended only to display mastery of the concepts
+@include smScreen {
+  .top-nav {
+    display: none;
+  }
+
+  .ham-menu {
+    display: flex;
+    position: absolute;
+    justify-content: space-evenly;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 9999;
+
+    &.close {
+      :nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      :nth-child(2) {
+        opacity: 0;
+      }
+      :nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }
+
+    hr {
+      display: block;
+      width: 80%;
+      height: 5px;
+      color: $white;
+      @include easeOut;
+
+      &:hover {
+        background: red;
+      }
+    }
+  }
+  .mobile-nav {
+    position: absolute;
+    min-height: 100vh;
+    max-height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 9998;
+
+    justify-content: center;
+
+    transform: translate(501px, 0px);
+    color: $black;
+    @include easeOut;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      li {
+        padding: 1rem;
+        a {
+          @include linkHover;
+          font-size: 2rem;
+        }
+      }
+    }
+
+    &.show {
+      transform: translate(0px, 0px);
+      @include easeOut;
+    }
+  }
+
+  // tablets
+  @include mdScreen {
+  }
+
+  // desktops
+  @include lgScreen {
+    body {
+      background: #333;
+    }
+  }
+}

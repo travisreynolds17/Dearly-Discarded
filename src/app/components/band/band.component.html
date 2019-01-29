@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="heading">The crew!</div>
+  <div class="members" *ngFor="let member of members">
+    <img src="{{ member.img }} " alt="{{ member.name }}" />
+    <h2>{{ member.name }}</h2>
+    <h3>{{ member.position }}</h3>
+    <p>{{ member.description }}</p>
+    <hr />
+  </div>
+  <div class="buttons">
+    <h3>Want to know more?</h3>
+    <button (click)="toggleFaqs()">FAQs</button>
+    <button (click)="toggleHistory()">FAQs</button>
+  </div>
+
+  <div class="history" [class.show]="showHistory">
+    Stuff stuff stuffdhiaop hgdiap hiow wepa pgpwn haphupw
+  </div>
+
+  <div class="faq-list" [class.show]="showFaqs">
+    <h2>FAQs!</h2>
+    <div class="faq" *ngFor="let faq of faqs">
+      <hr />
+      <div class="question">{{ faq.question }}</div>
+      <div class="answer">{{ faq.answer }}</div>
+    </div>
+  </div>
+</div>

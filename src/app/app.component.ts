@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'band-angular';
+  title = 'Dearly Discarded - Official Band Page';
 }

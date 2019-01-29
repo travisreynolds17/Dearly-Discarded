@@ -1,0 +1,41 @@
+<nav>
+  <div class="logo"><a routerLink="/"> Dearly Discarded </a></div>
+  <div class="top-nav">
+    <ul>
+      <li><a routerLink="/landing"> Home </a></li>
+      <li><a routerLink="/band"> Band </a></li>
+      <li><a routerLink="/news"> News </a></li>
+      <li><a routerLink="/gallery"> Gallery </a></li>
+      <li><a routerLink="/merch"> Merch </a></li>
+      <li><a routerLink="/music"> Music </a></li>
+      <li><a routerLink="/shows"> Shows </a></li>
+    </ul>
+    <ul>
+      <li><a routerLink="/login">Login</a></li>
+      <li><a routerLink="/sign-up">Sign Up</a></li>
+    </ul>
+  </div>
+
+  <div (click)="toggleHam()" class="ham-menu" [class.close]="showHam">
+    <hr class="line-1" [class.close]="showHam" />
+    <hr class="line-2" [class.close]="showHam" />
+    <hr class="line-3" [class.close]="showHam" />
+  </div>
+
+  <!-- only to show on click of hamburger menu-->
+  <div class="mobile-nav" *ngIf="showHam" [class.show]="showHam">
+    <ul>
+      <li><a (click)="toggleMenu()" routerLink="/landing"> Home </a></li>
+      <li><a (click)="toggleMenu()" routerLink="/band"> Band </a></li>
+      <li><a (click)="toggleMenu()" routerLink="/news"> News </a></li>
+      <li><a (click)="toggleMenu()" routerLink="/gallery"> Gallery </a></li>
+      <li><a (click)="toggleMenu()" routerLink="/merch"> Merch </a></li>
+      <li><a (click)="toggleMenu()" routerLink="/music"> Music </a></li>
+      <li><a (click)="toggleMenu()" routerLink="/shows"> Shows </a></li>
+      <li><a (click)="toggleMenu()" routerLink="/login">Login</a></li>
+      <li><a (click)="toggleMenu()" routerLink="/sign-up">Sign Up</a></li>
+    </ul>
+  </div>
+
+  <hr />
+</nav>

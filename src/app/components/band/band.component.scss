@@ -1,0 +1,101 @@
+@import "../../../styles.scss";
+
+.container {
+  width: 80%;
+}
+
+.heading {
+  font-size: 2rem;
+}
+
+@include smScreen {
+  .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+
+    .heading {
+      color: $white;
+      margin: 1.2rem auto;
+      font-family: $font-secondary;
+    }
+
+    .members {
+      color: $white;
+
+      img {
+        border-radius: 30%;
+      }
+
+      h2 {
+        font-family: $font-fancy;
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-family: $font-secondary;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-family: $font-primary;
+      }
+    }
+
+    .faq-list {
+      transform: translate(1000px) scale(0);
+      @include easeOut;
+      h2 {
+        color: $color-primary;
+      }
+
+      &.show {
+        @include easeOut;
+        transform: translate(0) scale(1);
+      }
+
+      .faq {
+        text-align: left;
+        color: $white;
+
+        .question {
+          font-family: $font-secondary;
+
+          font-size: 1.3rem;
+          &.show {
+            @include easeOut;
+          }
+        }
+
+        .answer {
+          font-family: $font-primary;
+          font-size: 1.1rem;
+          &.show {
+            @include easeOut;
+          }
+        }
+      }
+    }
+
+    .history {
+      transform: translate(-1000px) scale(0);
+      &.show {
+        display: block;
+        transform: translate(0) scale(1);
+        @include easeOut;
+      }
+    }
+
+    hr {
+      margin: 1rem auto;
+    }
+  }
+}
+
+@include mdScreen {
+}
+
+@include lgScreen {
+}

@@ -1,0 +1,34 @@
+@import "../../../styles";
+
+footer {
+  padding: 1rem;
+}
+
+i {
+  font-size: 2rem;
+  @include linkHover;
+}
+
+.social {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+/* responsive styles themselves will be included in each component scss file-----------
+-----------------------------------------------------------------------------------*/
+
+//phones - here we are keeping the breakpoints limited as this is intended only to display mastery of the concepts
+@include smScreen {
+  i {
+    color: $color-secondary;
+  }
+}
+
+// tablets
+@include mdScreen {
+}
+
+// desktops
+@include smScreen {
+}

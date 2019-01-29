@@ -1,0 +1,14 @@
+// only for the most general of styles
+
+@import "../styles";
+
+app-footer {
+  position: sticky;
+  bottom: 0;
+}
+
+@include smScreen {
+  body {
+    background: $black;
+  }
+}
