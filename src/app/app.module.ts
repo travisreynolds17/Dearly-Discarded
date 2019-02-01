@@ -12,6 +12,10 @@ import { RouterModule, Routes } from "@angular/router";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { FooterComponent } from "./components/footer/footer.component";
 
+import { ReactiveFormsModule } from "@angular/forms";
+
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +24,14 @@ import { FooterComponent } from "./components/footer/footer.component";
     FooterComponent,
     routingComponents
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, RouterModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    RouterModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule
+  ],
   providers: [DataService],
   bootstrap: [AppComponent]
 })

@@ -10,6 +10,7 @@ import { MusicComponent } from "./components/music/music.component";
 import { SignUpComponent } from "./components/sign-up/sign-up.component";
 import { LoginComponent } from "./components/login/login.component";
 import { BandComponent } from "./components/band/band.component";
+import { CartComponent } from "./components/cart/cart.component";
 
 const routes: Routes = [
   {
@@ -47,6 +48,10 @@ const routes: Routes = [
   {
     path: "sign-up",
     component: SignUpComponent
+  },
+  {
+    path: "cart",
+    component: CartComponent
   }
 ];
 
@@ -65,5 +70,6 @@ export const routingComponents = [
   ShowsComponent,
   MusicComponent,
   LoginComponent,
-  SignUpComponent
+  SignUpComponent,
+  CartComponent
 ];

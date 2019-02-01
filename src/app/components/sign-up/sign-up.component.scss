@@ -1,0 +1,45 @@
+@import "../../../styles.scss";
+
+.form-group {
+  // styles for when state of data currently in field
+
+  .ng-invalid {
+    border-left: 1rem solid red;
+  }
+  .ng-valid {
+    border-left: 1rem solid green;
+  }
+
+  label {
+    display: block;
+    color: $white;
+  }
+
+  .error-message {
+    transform: scale(0);
+    @include easeOut;
+    height: 0;
+    &.show {
+      transform: scale(1);
+      height: auto;
+    }
+  }
+}
+@include smScreen {
+  form {
+    margin: 0 auto;
+    padding: 1rem;
+    background: darken($color-primary, 3);
+  }
+  .error-message {
+    color: $white;
+  }
+}
+
+// The following classes go with form control and show what the user has done
+
+@include mdScreen {
+}
+
+@include lgScreen {
+}

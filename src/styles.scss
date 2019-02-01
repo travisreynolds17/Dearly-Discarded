@@ -6,6 +6,10 @@
 // color themes
 // Treat it as a _config file
 
+// pre-built MATERIAL theme import
+
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+
 /* VARIABLES -----------------------------------------------------------------------
 -----------------------------------------------------------------------------------*/
 
@@ -17,6 +21,7 @@ $font-fancy: "Indie Flower", cursive;
 $font-highlight: gold;
 $color-primary: orange;
 $color-secondary: blue;
+$link: rgb(15, 255, 255);
 
 /* FONTS -----------------------------------------------------------------------
 -----------------------------------------------------------------------------------*/
@@ -49,6 +54,7 @@ li {
 
 a {
   text-decoration: none;
+  color: $link;
 }
 
 /* media queries -----------------------------------------------------------------------

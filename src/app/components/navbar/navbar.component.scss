@@ -17,6 +17,18 @@ a {
     display: none;
   }
 
+  .cart {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    top: 2px;
+    padding: 5px;
+    font-size: 23px;
+    right: 50px;
+    height: 40px;
+    z-index: 9997;
+  }
   .ham-menu {
     display: flex;
     position: absolute;
