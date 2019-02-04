@@ -1,0 +1,85 @@
+@import "../../../styles.scss";
+
+.container {
+  color: $white;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.news-block {
+  display: grid;
+  grid-row-gap: 0.5rem;
+  min-height: 7rem;
+  margin-bottom: 2rem;
+
+  img {
+    transform: translate(2000px);
+    grid-area: pic;
+    @include easeOut;
+
+    &.show {
+      transform: translate(0);
+    }
+  }
+
+  hr {
+    color: darken($white, 30);
+    grid-area: hr;
+  }
+
+  .news-graf {
+    font-size: 0.9rem;
+    grid-area: center;
+  }
+}
+
+.headline {
+  text-transform: uppercase;
+  color: $color-primary;
+  font-size: 2rem;
+
+  grid-area: head;
+}
+
+.header {
+  text-transform: uppercase;
+  color: lighten($color-secondary, 30%);
+  font-size: 3rem;
+  text-align: center;
+  margin: 4rem 0 0 0;
+  font-family: $font-fancy;
+}
+
+.news-link {
+  grid-area: link;
+  justify-self: right;
+}
+
+.news-date {
+  color: darken($white, 20%);
+  grid-area: date;
+}
+
+@include smScreen {
+  .news-block {
+    grid-template-areas:
+      "head head head"
+      "center center center"
+      "date date link"
+      "hr hr hr";
+
+    margin: 3rem 0 2rem 0;
+  }
+
+  .news-graf {
+    width: 90%;
+    margin: 1rem 0;
+  }
+}
+
+@include mdScreen {
+}
+
+@include lgScreen {
+}

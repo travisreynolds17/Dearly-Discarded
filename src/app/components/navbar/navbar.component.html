@@ -28,6 +28,7 @@
   <!-- only to show on click of hamburger menu-->
   <div class="mobile-nav" *ngIf="showHam" [class.show]="showHam">
     <ul>
+      
       <li><a (click)="toggleMenu()" routerLink="/landing"> Home </a></li>
       <li><a (click)="toggleMenu()" routerLink="/band"> Band </a></li>
       <li><a (click)="toggleMenu()" routerLink="/news"> News </a></li>
@@ -35,8 +36,7 @@
       <li><a (click)="toggleMenu()" routerLink="/merch"> Merch </a></li>
       <li><a (click)="toggleMenu()" routerLink="/music"> Music </a></li>
       <li><a (click)="toggleMenu()" routerLink="/shows"> Shows </a></li>
-      <li><a (click)="toggleMenu()" routerLink="/login">Login</a></li>
-      <li><a (click)="toggleMenu()" routerLink="/sign-up">Sign Up</a></li>
+      
     </ul>
   </div>
 

@@ -1,3 +1,22 @@
-<p>
-  music works!
-</p>
+<div class="container">
+  <div class="header">
+    Albums
+  </div>
+
+  <div class="albums-block" *ngFor="let album of albums">
+    <div class="title">
+      {{ album.title }}
+    </div>
+    <div class="art">
+      {{ album.art }}
+    </div>
+    <div class="tracklist" *ngFor="let track of albums.tracklist">
+      {{ track }}
+    </div>
+    <a href="#">
+      <button>
+        GET IT!
+      </button>
+    </a>
+  </div>
+</div>

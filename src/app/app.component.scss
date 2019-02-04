@@ -2,9 +2,14 @@
 
 @import "../styles";
 
-app-footer {
-  position: sticky;
-  bottom: 0;
+.full-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .full-content {
+    flex: 1;
+  }
 }
 
 @include smScreen {

@@ -1,0 +1,83 @@
+@import "../../../styles.scss";
+
+// Will use same stylesheet base as news category
+@import "_mobile.scss";
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  font-family: $font-fancy;
+}
+a {
+  display: flex;
+
+  justify-self: right;
+  grid-area: button;
+
+  button {
+    font-family: $font-secondary;
+    font-weight: 600;
+    @include orangeGradient;
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 3px;
+  }
+}
+
+hr {
+  grid-area: hr;
+  margin: 4rem 0;
+}
+
+.date {
+  grid-area: date;
+  font-family: $font-secondary;
+  margin: auto 0;
+  font-size: 1rem;
+  color: darken($white, 30%);
+}
+
+.venue {
+  grid-area: venue;
+  font-family: $font-secondary;
+  margin: auto 0;
+  font-size: 1.5rem;
+}
+
+.city {
+  grid-area: location;
+  font-family: $font-primary;
+  margin: auto 0;
+  text-transform: uppercase;
+  color: darken($white, 30%);
+  letter-spacing: 0.3rem;
+  font-size: 1.1rem;
+}
+
+@include smScreen {
+  .header {
+    font-size: 3rem;
+    color: $color-primary;
+    margin: 4rem 0 0 0;
+  }
+  .shows-block {
+    color: $white;
+    display: grid;
+    grid-row-gap: 0.5em;
+    grid-template-areas:
+      "date date date"
+      " venue venue button "
+      " location location location"
+      "hr   hr  hr";
+  }
+}
+
+@include mdScreen {
+}
+
+@include lgScreen {
+}

@@ -1,3 +1,19 @@
-<p>
-  news works!
-</p>
+<div class="container">
+  <div class="header">NEWS</div>
+
+  <div class="news-block" *ngFor="let element of news">
+    <div class="headline">
+      {{ element.headline }}
+    </div>
+    <div class="news-date">
+      {{ element.date }}
+    </div>
+    <hr />
+    <div class="news-graf">
+      {{ element.graf }}
+    </div>
+    <div class="news-link">
+      <a [routerLink]="['/path', routeParam]">Read More</a>
+    </div>
+  </div>
+</div>

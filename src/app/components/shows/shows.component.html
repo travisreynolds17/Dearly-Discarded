@@ -1,3 +1,24 @@
-<p>
-  shows works!
-</p>
+<div class="container">
+  <div class="header">
+    Show Schedule
+  </div>
+  <hr />
+  <div class="shows-block" *ngFor="let show of shows">
+    <div class="date">
+      {{ show.date }}
+    </div>
+    <div class="venue">
+      {{ show.venue }}
+    </div>
+
+    <div class="city">
+      {{ show.location }}
+    </div>
+
+    <a href="">
+      <button>Get Tickets</button>
+    </a>
+
+    <hr />
+  </div>
+</div>

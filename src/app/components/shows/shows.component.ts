@@ -1,15 +1,59 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-shows',
-  templateUrl: './shows.component.html',
-  styleUrls: ['./shows.component.scss']
+  selector: "app-shows",
+  templateUrl: "./shows.component.html",
+  styleUrls: ["./shows.component.scss"]
 })
 export class ShowsComponent implements OnInit {
+  shows: any;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+    this.shows = [
+      {
+        location: "Placeberg, KY",
+        venue: "Name of Venue",
+        image: "../../../assets/img/shows/##",
+        date: "xx/yy/zz"
+      },
+      {
+        location: "Placeberg, KY",
+        venue: "Name of Venue",
+        image: "../../../assets/img/shows/##",
+        date: "xx/yy/zz"
+      },
+      {
+        location: "Placeberg, KY",
+        venue: "Name of Venue",
+        image: "../../../assets/img/shows/##",
+        date: "xx/yy/zz"
+      },
+      {
+        location: "Placeberg, KY",
+        venue: "Name of Venue",
+        image: "../../../assets/img/shows/##",
+        date: "xx/yy/zz"
+      },
+      {
+        location: "Placeberg, KY",
+        venue: "Name of Venue",
+        image: "../../../assets/img/shows/##",
+        date: "xx/yy/zz"
+      },
+      {
+        location: "Placeberg, KY",
+        venue: "Name of Venue",
+        image: "../../../assets/img/shows/##",
+        date: "xx/yy/zz"
+      },
+      {
+        location: "Placeberg, KY",
+        venue: "Name of Venue",
+        image: "../../../assets/img/shows/##",
+        date: "xx/yy/zz"
+      }
+    ];
   }
-
 }
