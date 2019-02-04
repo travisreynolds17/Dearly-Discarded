@@ -13,8 +13,9 @@ export class MusicComponent implements OnInit {
   ngOnInit() {
     this.albums = [
       {
+        show: false,
         title: "The Green Dude",
-        art: "##",
+        art: "album1.jpg",
         tracklist: [
           "First Song",
           "Second Song",
@@ -27,8 +28,9 @@ export class MusicComponent implements OnInit {
         label: "Dudes Slaying Riffs"
       },
       {
+        show: false,
         title: "The Green Dude",
-        art: "##",
+        art: "album2.jpg",
         tracklist: [
           "First Song",
           "Second Song",
@@ -41,8 +43,9 @@ export class MusicComponent implements OnInit {
         label: "Dudes Slaying Riffs"
       },
       {
+        show: false,
         title: "The Green Dude",
-        art: "##",
+        art: "album3.jpg",
         tracklist: [
           "First Song",
           "Second Song",
@@ -55,22 +58,9 @@ export class MusicComponent implements OnInit {
         label: "Dudes Slaying Riffs"
       },
       {
+        show: false,
         title: "The Green Dude",
-        art: "##",
-        tracklist: [
-          "First Song",
-          "Second Song",
-          "Third Song",
-          "Fourth Song",
-          "Fifth Song",
-          "Sixth Song"
-        ],
-        date: "xx/xx/xxxx",
-        label: "Dudes Slaying Riffs"
-      },
-      {
-        title: "The Green Dude",
-        art: "##",
+        art: "album4.jpg",
         tracklist: [
           "First Song",
           "Second Song",

@@ -8,15 +8,27 @@
       {{ album.title }}
     </div>
     <div class="art">
-      {{ album.art }}
-    </div>
-    <div class="tracklist" *ngFor="let track of albums.tracklist">
-      {{ track }}
+      <img src="../../../assets/img/albums/{{ album.art }}" alt="CD Cover" />
     </div>
     <a href="#">
       <button>
         GET IT!
       </button>
     </a>
+    <div class="date">
+      {{ album.date }}
+    </div>
+    <div class="label">
+      {{ album.label }}
+    </div>
+    <button (click)="album.show = !album.show" class="trackbutton">
+      View tracklist
+    </button>
+    <div class="tracklist" [ngClass]="{ show: album.show }">
+      <div class="track" *ngFor="let track of album.tracklist">
+        {{ track }}
+      </div>
+    </div>
+    <hr />
   </div>
 </div>
