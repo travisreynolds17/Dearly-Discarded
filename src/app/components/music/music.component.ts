@@ -25,7 +25,7 @@ export class MusicComponent implements OnInit {
           "Sixth Song"
         ],
         date: "xx/xx/xxxx",
-        label: "Dudes Slaying Riffs"
+        label: "Dudes Slaying"
       },
       {
         show: false,
@@ -40,7 +40,7 @@ export class MusicComponent implements OnInit {
           "Sixth Song"
         ],
         date: "xx/xx/xxxx",
-        label: "Dudes Slaying Riffs"
+        label: "Slaying Riffs"
       },
       {
         show: false,
@@ -55,7 +55,7 @@ export class MusicComponent implements OnInit {
           "Sixth Song"
         ],
         date: "xx/xx/xxxx",
-        label: "Dudes Slaying Riffs"
+        label: "Dudes Riffs"
       },
       {
         show: false,
@@ -70,7 +70,7 @@ export class MusicComponent implements OnInit {
           "Sixth Song"
         ],
         date: "xx/xx/xxxx",
-        label: "Dudes Slaying Riffs"
+        label: "Slaying"
       }
     ];
   }

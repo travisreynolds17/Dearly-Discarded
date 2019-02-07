@@ -8,6 +8,13 @@
   margin: 0 auto;
 }
 
+.header {
+  font-family: $font-fancy;
+  font-size: 4rem;
+  text-align: center;
+  margin: 3rem auto;
+}
+
 .albums-block {
   display: grid;
 
@@ -18,6 +25,8 @@
 
 .title {
   grid-area: title;
+  font-family: $font-primary;
+  font-size: 1.5rem;
 }
 
 hr {
@@ -34,51 +43,67 @@ hr {
 
 .date {
   grid-area: date;
+  font-family: $font-secondary;
+  font-size: 1.1rem;
 }
 
 .label {
+  // This refers to a record label, not an HTML label
   grid-area: label;
+  font-family: $font-secondary;
+  font-size: 1.1rem;
 }
 
 .tracklist {
+  display: none;
   grid-area: tracks;
   transform: translate(2000px) scale(0);
   @include easeOut;
+  font-family: $font-primary;
+  font-size: 1.2rem;
 
   &.show {
+    display: block;
     transform: translate(0) scale(1);
+  }
+}
+// layout
+
+.albums-block {
+  grid-template-areas:
+    "title title art"
+    "date date art"
+    "label label art"
+    "trackbutton .... button"
+    "tracks tracks tracks"
+    "hr   hr    hr";
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 1rem;
+  margin-bottom: 4rem;
+
+  .art {
+    display: flex;
+    justify-self: right;
+    flex-grow: 0;
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 1px;
+      border: 1px solid $white;
+    }
+  }
+
+  a {
+    display: flex;
+    justify-self: right;
   }
 }
 
 @include smScreen {
-  .container {
+  .albums {
     display: flex;
     flex-direction: column;
     justify-items: space-between;
-  }
-  .albums-block {
-    grid-template-areas:
-      "title title art"
-      "date date art"
-      "label label art"
-      "trackbutton .... button"
-      "tracks tracks tracks"
-      "hr   hr    hr";
-    margin-bottom: 4rem;
-
-    .art {
-      margin: auto;
-      img {
-        width: 200px;
-        border-radius: 1px;
-        border: 1px solid $white;
-      }
-    }
-
-    a {
-      display: flex;
-      justify-self: center;
-    }
   }
 }
 
@@ -86,4 +111,25 @@ hr {
 }
 
 @include lgScreen {
+  .albums {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .albums-block {
+    grid-template-areas:
+      "title art art"
+      "date art art"
+      "label art art"
+      ".... .... button"
+      "trackbutton trackbutton trackbutton"
+      "tracks tracks tracks"
+      "hr hr hr";
+
+    .art {
+      img {
+        width: 500px;
+        height: 500px;
+      }
+    }
+  }
 }

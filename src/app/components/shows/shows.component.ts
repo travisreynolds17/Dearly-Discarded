@@ -15,43 +15,43 @@ export class ShowsComponent implements OnInit {
       {
         location: "Placeberg, KY",
         venue: "Name of Venue",
-        image: "../../../assets/img/shows/##",
+        image: "showsStock.jpg",
         date: "xx/yy/zz"
       },
       {
         location: "Placeberg, KY",
         venue: "Name of Venue",
-        image: "../../../assets/img/shows/##",
+        image: "showsStock.jpg",
         date: "xx/yy/zz"
       },
       {
         location: "Placeberg, KY",
         venue: "Name of Venue",
-        image: "../../../assets/img/shows/##",
+        image: "showsStock.jpg",
         date: "xx/yy/zz"
       },
       {
         location: "Placeberg, KY",
         venue: "Name of Venue",
-        image: "../../../assets/img/shows/##",
+        image: "showsStock.jpg",
         date: "xx/yy/zz"
       },
       {
         location: "Placeberg, KY",
         venue: "Name of Venue",
-        image: "../../../assets/img/shows/##",
+        image: "showsStock.jpg",
         date: "xx/yy/zz"
       },
       {
         location: "Placeberg, KY",
         venue: "Name of Venue",
-        image: "../../../assets/img/shows/##",
+        image: "showsStock.jpg",
         date: "xx/yy/zz"
       },
       {
         location: "Placeberg, KY",
         venue: "Name of Venue",
-        image: "../../../assets/img/shows/##",
+        image: "showsStock.jpg",
         date: "xx/yy/zz"
       }
     ];

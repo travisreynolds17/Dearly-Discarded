@@ -38,6 +38,12 @@ export class BandComponent implements OnInit {
         position: "Drums",
         img: "../../../assets/img/members/drums-thumb.jpg",
         description: "stuff stuff stuff stuff stuff stuuffuf hdiadh sfhdsasad"
+      },
+      {
+        name: "Amber Reynolds",
+        position: "Manager / Photos",
+        img: "../../../assets/img/members/guitarist-thumb.jpg",
+        description: "stuff stuff stuff stuff stuff stuuffuf hdiadh sfhdsasad"
       }
     ];
 

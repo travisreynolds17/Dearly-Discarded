@@ -79,7 +79,32 @@
 }
 
 @include mdScreen {
+  .news-block {
+    grid-template-areas:
+      "head head head"
+      "center center center"
+      "date date link"
+      "hr hr hr";
+    grid-row-gap: 1rem;
+
+    margin: 3rem 0 2rem 0;
+  }
 }
 
 @include lgScreen {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2.5rem;
+  }
+  .news-block {
+    grid-template-areas:
+      "head head head"
+      "center center center"
+      "date date link"
+      "hr hr hr";
+    grid-row-gap: 1rem;
+    width: 80%;
+    margin: 3rem auto 2rem auto;
+  }
 }

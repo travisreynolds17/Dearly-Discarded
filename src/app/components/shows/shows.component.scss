@@ -1,7 +1,6 @@
 @import "../../../styles.scss";
 
 // Will use same stylesheet base as news category
-@import "_mobile.scss";
 
 .container {
   width: 80%;
@@ -11,6 +10,9 @@
 .header {
   text-align: center;
   font-family: $font-fancy;
+  font-size: 3rem;
+  color: $color-primary;
+  margin: 4rem 0 0 0;
 }
 a {
   display: flex;
@@ -58,12 +60,12 @@ hr {
   font-size: 1.1rem;
 }
 
+.pic {
+  display: none;
+  grid-area: pic;
+}
+
 @include smScreen {
-  .header {
-    font-size: 3rem;
-    color: $color-primary;
-    margin: 4rem 0 0 0;
-  }
   .shows-block {
     color: $white;
     display: grid;
@@ -77,7 +79,44 @@ hr {
 }
 
 @include mdScreen {
+  .shows-block {
+    color: $white;
+    display: grid;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 1.5rem;
+    grid-template-areas:
+      "date pic pic"
+      " venue pic pic "
+      " location button button"
+      "hr   hr  hr";
+  }
+
+  .pic {
+    display: flex;
+    justify-self: right;
+    img {
+      display: flex;
+      justify-self: right;
+      height: 200px;
+      width: 400px;
+    }
+  }
 }
 
 @include lgScreen {
+  .pic {
+    display: flex;
+    justify-self: center;
+  }
+  .shows-block {
+    color: $white;
+    display: grid;
+    grid-row-gap: 0.5em;
+    grid-template-areas:
+      "pic pic pic"
+      "date date date"
+      " venue venue button "
+      " location location location"
+      "hr   hr  hr";
+  }
 }

@@ -9,25 +9,7 @@
 // pre-built MATERIAL theme import
 
 @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
-
-/* VARIABLES -----------------------------------------------------------------------
------------------------------------------------------------------------------------*/
-
-$black: #111222;
-$white: #fefefe;
-$font-primary: "Montserrat", sans-serif;
-$font-secondary: "Merriweather", serif;
-$font-fancy: "Indie Flower", cursive;
-$font-highlight: gold;
-$color-primary: orange;
-$color-secondary: blue;
-$link: rgb(15, 255, 255);
-
-/* FONTS -----------------------------------------------------------------------
------------------------------------------------------------------------------------*/
-
-@import url("https://fonts.googleapis.com/css?family=Merriweather|Montserrat");
-@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+@import "app/custom-css/config";
 
 /* Global styles -----------------------------------------------------------------------
 -----------------------------------------------------------------------------------*/
@@ -41,6 +23,7 @@ $link: rgb(15, 255, 255);
 html,
 body {
   min-height: 100vh;
+  background: $black;
 }
 
 body {
@@ -55,67 +38,9 @@ li {
 a {
   text-decoration: none;
   color: $link;
-}
+  @include easeOut;
 
-/* media queries -----------------------------------------------------------------------
------------------------------------------------------------------------------------*/
-
-@mixin smScreen {
-  @media screen and (max-width: 500px) {
-    @content;
+  &.hover {
+    @include linkHover;
   }
-}
-
-@mixin mdScreen {
-  @media screen and (min-width: 501px) and (max-width: 768px) {
-    @content;
-  }
-}
-
-@mixin lgScreen {
-  @media screen and (min-wdith: 769px) {
-    @content;
-  }
-}
-
-// universal responsive style changes
-@include smScreen {
-  body {
-    background: $black;
-  }
-}
-
-/* MIXINS -----------------------------------------------------------------------
------------------------------------------------------------------------------------*/
-
-@mixin easeOut {
-  transition: 1s ease-out all;
-}
-
-@mixin linkHover {
-  &:hover {
-    color: gold;
-    text-decoration: underline;
-    @include easeOut;
-  }
-}
-
-@mixin orangeGradient {
-  background: #ffc578; /* Old browsers */
-  background: -moz-linear-gradient(
-    top,
-    #ffc578 0%,
-    #fb9d23 100%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    top,
-    #ffc578 0%,
-    #fb9d23 100%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #ffc578 0%,
-    #fb9d23 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc578', endColorstr='#fb9d23',GradientType=0 ); /* IE6-9 */
 }

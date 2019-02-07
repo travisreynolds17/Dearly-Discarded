@@ -21,7 +21,7 @@ i {
 //phones - here we are keeping the breakpoints limited as this is intended only to display mastery of the concepts
 @include smScreen {
   i {
-    color: $color-secondary;
+    color: lighten($color-secondary, 30%);
   }
 }
 

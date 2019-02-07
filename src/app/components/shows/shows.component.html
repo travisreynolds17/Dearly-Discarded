@@ -4,6 +4,12 @@
   </div>
   <hr />
   <div class="shows-block" *ngFor="let show of shows">
+    <div class="pic">
+      <img
+        src="../../../assets/img/B-roll/{{ show.image }}"
+        alt="Concert Picture"
+      />
+    </div>
     <div class="date">
       {{ show.date }}
     </div>

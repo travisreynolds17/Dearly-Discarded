@@ -2,7 +2,7 @@
   <div class="header">
     Albums
   </div>
-
+<div class="albums">
   <div class="albums-block" *ngFor="let album of albums">
     <div class="title">
       {{ album.title }}
@@ -11,7 +11,7 @@
       <img src="../../../assets/img/albums/{{ album.art }}" alt="CD Cover" />
     </div>
     <a href="#">
-      <button>
+      <button class="button-orange">
         GET IT!
       </button>
     </a>
@@ -21,7 +21,7 @@
     <div class="label">
       {{ album.label }}
     </div>
-    <button (click)="album.show = !album.show" class="trackbutton">
+    <button (click)="album.show = !album.show" class="trackbutton button-green">
       View tracklist
     </button>
     <div class="tracklist" [ngClass]="{ show: album.show }">
@@ -31,4 +31,5 @@
     </div>
     <hr />
   </div>
+</div>
 </div>
